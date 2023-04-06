@@ -1426,6 +1426,7 @@ frames = frames + (dt*60)
 				if p1.perfectclear then reattackeris = reattackeris + 10 end
 				while reattackeris > 0 do
 					table.insert(p2.piecequeue,randompieces[love.math.random(#randompieces)])
+					reattackeris = reattackeris - 1
 				end
 			end
 		else
@@ -1454,6 +1455,7 @@ frames = frames + (dt*60)
 				if p2.perfectclear then reattackeris = reattackeris + 10 end
 				while reattackeris > 0 do
 					table.insert(p1.piecequeue,randompieces[love.math.random(#randompieces)])
+					reattackeris = reattackeris - 1
 				end
 			end
 		else
