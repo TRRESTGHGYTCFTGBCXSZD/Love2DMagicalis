@@ -342,6 +342,36 @@ function love.load()
 	{0,0,1,0,0},
 	},
 	},
+	["I5"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{1,1,1,1,1},
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	},
+	[1]={
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{1,1,1,1,1},
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	},
+	[3]={
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	},
+	},
 	["D13"]={
 	["unoffsetable"]=true,
 	[0]={
@@ -601,7 +631,7 @@ function initplayer(player)
 	player.piecey=0
 	player.piecerotation=0
 	player.piececurrent="E"
-	player.piecequeue={"I","I","I","I","I","I","I","I","I","I","I","I","I","I","I","I",}
+	player.piecequeue={"I"}
 	player.attackincoming=0
 	player.linecleartrigger=false
 	player.lineclears=0
@@ -1320,6 +1350,8 @@ function updateplayer(player)
 end
 resettime = 300
 winner = "none"
+randompieces = {"I5"}
+randomsuperpieces = {"T9","T15","D13"}
 function love.update(dt)
 frames = frames + (dt*60)
 	while frames > 1 do
@@ -1392,24 +1424,13 @@ frames = frames + (dt*60)
 				if p1.combo >= 8 then reattackeris = reattackeris + 1 end
 				if p1.combo >= 11 then reattackeris = reattackeris + 1 end
 				if p1.perfectclear then reattackeris = reattackeris + 10 end
-				p1.attackincoming = p1.attackincoming - reattackeris
-				if p1.attackincoming < 0 then
-					p2.attackincoming = p2.attackincoming - p1.attackincoming
-					p1.attackincoming = 0
+				reattackeris
+				while reattackeris > 0 do
+					table.insert(p2.piecequeue,randompieces[love.math.random(#randompieces)])
 				end
 			end
 		else
 			p1.combo = -1
-			local attackibility = 4
-			while p1.attackincoming > 0 and attackibility > 0 do
-				table.remove(p1.board,1)
-				table.insert(p1.board,{"G","G","G","G","G","G","G","G","G","G",})
-				p1.board[40][love.math.random(1,10)] = "E"
-				p1.attackincoming = p1.attackincoming - 1
-				attackibility = attackibility - 1
-				love.audio.stop(garbagekick)
-				love.audio.play(garbagekick)
-			end
 		end
 	end
 	if p2.linecleartrigger then
@@ -1432,24 +1453,12 @@ frames = frames + (dt*60)
 				if p2.combo >= 8 then reattackeris = reattackeris + 1 end
 				if p2.combo >= 11 then reattackeris = reattackeris + 1 end
 				if p2.perfectclear then reattackeris = reattackeris + 10 end
-				p2.attackincoming = p2.attackincoming - reattackeris
-				if p2.attackincoming < 0 then
-					p1.attackincoming = p1.attackincoming - p2.attackincoming
-					p2.attackincoming = 0
+				while reattackeris > 0 do
+					table.insert(p1.piecequeue,randompieces[love.math.random(#randompieces)])
 				end
 			end
 		else
 			p2.combo = -1
-			local attackibility = 4
-			while p2.attackincoming > 0 and attackibility > 0 do
-				table.remove(p2.board,1)
-				table.insert(p2.board,{"G","G","G","G","G","G","G","G","G","G",})
-				p2.board[40][love.math.random(1,10)] = "E"
-				p2.attackincoming = p2.attackincoming - 1
-				attackibility = attackibility - 1
-				love.audio.stop(garbagekick)
-				love.audio.play(garbagekick)
-			end
 		end
 	end
 	if #sharedpiecequeue < 3 then
