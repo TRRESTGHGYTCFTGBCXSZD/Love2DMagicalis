@@ -20,7 +20,7 @@ function love.load()
 	pieceimagetype.G = love.graphics.newImage("piece_garbage.png")
 	--pentominos
 	pieceimagetype.U = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.I5 = love.graphics.newImage("piece_garbage.png")
+	pieceimagetype.I5 = love.graphics.newImage("penta_white.png")
 	pieceimagetype.T5 = love.graphics.newImage("piece_garbage.png")
 	pieceimagetype.Z5a = love.graphics.newImage("piece_garbage.png")
 	pieceimagetype.S5a = love.graphics.newImage("piece_garbage.png")
@@ -1529,7 +1529,9 @@ function drawplayer(player,x,y,size)
 	for boardgridy = 1,40 do
 		for boardgridx = 1,10 do
 			if player.board[boardgridy][boardgridx] ~= "E" then
-				drawsprite(pieceimagetype[player.board[boardgridy][boardgridx]], 160+(boardgridx*16)-(88), 240+(boardgridy*16)-((88+320+80)),8,8,1,1)
+				rookyboy = pieceimagetype[player.board[boardgridy][boardgridx]]:getWidth( )
+				rookyboi = pieceimagetype[player.board[boardgridy][boardgridx]]:getHeight( )
+				drawsprite(pieceimagetype[player.board[boardgridy][boardgridx]], 160+(boardgridx*16)-(88), 240+(boardgridy*16)-((88+320+80)),8,8,1/(rookyboy/16),1/(rookyboi/16))
 			end
 		end
 	end
