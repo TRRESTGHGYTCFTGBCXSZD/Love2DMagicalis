@@ -1424,7 +1424,6 @@ frames = frames + (dt*60)
 				if p1.combo >= 8 then reattackeris = reattackeris + 1 end
 				if p1.combo >= 11 then reattackeris = reattackeris + 1 end
 				if p1.perfectclear then reattackeris = reattackeris + 10 end
-				reattackeris
 				while reattackeris > 0 do
 					table.insert(p2.piecequeue,randompieces[love.math.random(#randompieces)])
 				end
