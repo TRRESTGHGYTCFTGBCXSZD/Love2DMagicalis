@@ -624,7 +624,7 @@ function initplayer(player)
 	{"E","E","E","E","E","E","E","E","E","E",},
 	{"E","E","E","E","E","E","E","E","E","E",},
 	{"E","E","E","E","E","E","E","E","E","E",},
-	{"E","E","E","E","E","E","E","E","E","E",},
+	{"I5","E","E","E","E","E","E","E","E","E",},
 	}
 	player.pieceactive=false
 	player.piecex=0
@@ -1486,8 +1486,8 @@ function drawpiece(sprite,piecetyperr,rotation,x,y,size,dimx,dimy,centx,centy)
 	dimy = dimy or 16
 	rookyboy = sprite:getWidth( )
 	rookyboi = sprite:getHeight( )
-	centx = centx or 8
-	centy = centy or 8
+	centx = centx or rookyboy/2
+	centy = centy or rookyboi/2
 	for pies2 = 1 ,5 do
 		for pies1 = 1 ,5 do
 			if piecetype[piecetyperr][rotation][pies2][pies1] == 1 then
@@ -1531,7 +1531,7 @@ function drawplayer(player,x,y,size)
 			if player.board[boardgridy][boardgridx] ~= "E" then
 				rookyboy = pieceimagetype[player.board[boardgridy][boardgridx]]:getWidth( )
 				rookyboi = pieceimagetype[player.board[boardgridy][boardgridx]]:getHeight( )
-				drawsprite(pieceimagetype[player.board[boardgridy][boardgridx]], 160+(boardgridx*16)-(88), 240+(boardgridy*16)-((88+320+80)),8,8,1/(rookyboy/16),1/(rookyboi/16))
+				drawsprite(pieceimagetype[player.board[boardgridy][boardgridx]], 160+(boardgridx*16)-(88), 240+(boardgridy*16)-((88+320+80)),rookyboy/2,rookyboi/2,1/(rookyboy/16),1/(rookyboi/16))
 			end
 		end
 	end
