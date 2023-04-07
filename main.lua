@@ -19,27 +19,71 @@ function love.load()
 	pieceimagetype.S = love.graphics.newImage("piece_z.png")
 	pieceimagetype.G = love.graphics.newImage("piece_garbage.png")
 	--pentominos
-	pieceimagetype.U = love.graphics.newImage("piece_garbage.png")
+	pieceimagetype.U = love.graphics.newImage("penta_skin.png")
 	pieceimagetype.I5 = love.graphics.newImage("penta_white.png")
-	pieceimagetype.T5 = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Z5a = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.S5a = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Z5b = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.S5b = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Fa = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Fb = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.V = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.L5 = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.J5 = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Ya = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Yb = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.P = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.Q = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.X = love.graphics.newImage("piece_garbage.png")
-	pieceimagetype.W = love.graphics.newImage("piece_garbage.png")
+	pieceimagetype.T5 = love.graphics.newImage("penta_cyan.png")
+	pieceimagetype.Z5a = love.graphics.newImage("penta_red.png")
+	pieceimagetype.S5a = love.graphics.newImage("penta_green.png")
+	pieceimagetype.Z5b = love.graphics.newImage("penta_pink.png")
+	pieceimagetype.S5b = love.graphics.newImage("penta_green.png")
+	pieceimagetype.Fa = love.graphics.newImage("penta_blue.png")
+	pieceimagetype.Fb = love.graphics.newImage("penta_orange.png")
+	pieceimagetype.V = love.graphics.newImage("penta_magenta.png")
+	pieceimagetype.L5 = love.graphics.newImage("penta_orange.png")
+	pieceimagetype.J5 = love.graphics.newImage("penta_blue.png")
+	pieceimagetype.Ya = love.graphics.newImage("penta_orange.png")
+	pieceimagetype.Yb = love.graphics.newImage("penta_blue.png")
+	pieceimagetype.P = love.graphics.newImage("penta_green.png")
+	pieceimagetype.Q = love.graphics.newImage("penta_pink.png")
+	pieceimagetype.X = love.graphics.newImage("penta_magenta.png")
+	pieceimagetype.W = love.graphics.newImage("penta_pristinegreen.png")
+	
+	pieceimagetype.Sq2 = love.graphics.newImage("piece_square2.png")
+	pieceimagetype.Sq3 = love.graphics.newImage("piece_square3.png")
+	pieceimagetype.Sq4 = love.graphics.newImage("piece_square4.png")
+	pieceimagetype.Sq5 = love.graphics.newImage("piece_square5.png")
+	
+	pieceimagetype.T9 = love.graphics.newImage("super_t9.png")
+	pieceimagetype.T15 = love.graphics.newImage("super_t15.png")
+	pieceimagetype.D13 = love.graphics.newImage("super_d13.png")
+	pieceimagetype.U9 = love.graphics.newImage("super_ue.png")
 	pieceimagetype.Active = love.graphics.newImage("piece_active.png")
 	pieceimagetype.ActiveDark = love.graphics.newImage("piece_activedark.png")
 	pieceimagetype.ActiveHold = love.graphics.newImage("piece_activehold.png")
+	pieceimagetypenexttero = {}
+	pieceimagetypenexttero.I5 = love.graphics.newImage("penta_i5.png")
+	pieceimagetypenexttero.T5 = love.graphics.newImage("penta_t5.png")
+	pieceimagetypenexttero.Fa = love.graphics.newImage("penta_fa.png")
+	pieceimagetypenexttero.Fb = love.graphics.newImage("penta_fb.png")
+	pieceimagetypenexttero.Z5b = love.graphics.newImage("penta_z5b.png")
+	pieceimagetypenexttero.S5b = love.graphics.newImage("penta_s5b.png")
+	pieceimagetypenexttero.V = love.graphics.newImage("penta_v.png")
+	pieceimagetypenexttero.W = love.graphics.newImage("penta_w.png")
+	pieceimagetypenexttero.T9 = love.graphics.newImage("super_hidden.png")
+	pieceimagetypenexttero.T15 = love.graphics.newImage("super_hidden.png")
+	pieceimagetypenexttero.D13 = love.graphics.newImage("super_hidden.png")
+	pieceimagetypenexttero.U9 = love.graphics.newImage("super_hidden.png")
+	pieceimagetypenexttero.Sq2 = love.graphics.newImage("square_hidden.png")
+	pieceimagetypenexttero.Sq3 = love.graphics.newImage("square_hidden.png")
+	pieceimagetypenexttero.Sq4 = love.graphics.newImage("square_hidden.png")
+	pieceimagetypenexttero.Sq5 = love.graphics.newImage("square_hidden.png")
+	pieceimagetypeholdtero = {}
+	pieceimagetypeholdtero.I5 = love.graphics.newImage("penta_i5.png")
+	pieceimagetypeholdtero.T5 = love.graphics.newImage("penta_t5.png")
+	pieceimagetypeholdtero.Fa = love.graphics.newImage("penta_fa.png")
+	pieceimagetypeholdtero.Fb = love.graphics.newImage("penta_fb.png")
+	pieceimagetypeholdtero.Z5b = love.graphics.newImage("penta_z5b.png")
+	pieceimagetypeholdtero.S5b = love.graphics.newImage("penta_s5b.png")
+	pieceimagetypeholdtero.V = love.graphics.newImage("penta_v.png")
+	pieceimagetypeholdtero.W = love.graphics.newImage("penta_w.png")
+	pieceimagetypeholdtero.T9 = love.graphics.newImage("super_t9_hold.png")
+	pieceimagetypeholdtero.T15 = love.graphics.newImage("super_t15_hold.png")
+	pieceimagetypeholdtero.D13 = love.graphics.newImage("super_d13_hold.png")
+	pieceimagetypeholdtero.U9 = love.graphics.newImage("super_ue_hold.png")
+	pieceimagetypeholdtero.Sq2 = love.graphics.newImage("square_2.png")
+	pieceimagetypeholdtero.Sq3 = love.graphics.newImage("square_3.png")
+	pieceimagetypeholdtero.Sq4 = love.graphics.newImage("square_4.png")
+	pieceimagetypeholdtero.Sq5 = love.graphics.newImage("square_5.png")
 	garbageimagetype = {}
 	garbageimagetype.red = love.graphics.newImage("garbagebar_red.png")
 	garbageimagetype.yellow = love.graphics.newImage("garbagebar_yellow.png")
@@ -342,6 +386,7 @@ function love.load()
 	{0,0,1,0,0},
 	},
 	},
+	-- pentomino
 	["I5"]={
 	[0]={
 	{0,0,0,0,0},
@@ -372,35 +417,337 @@ function love.load()
 	{0,0,1,0,0},
 	},
 	},
-	["D13"]={
-	["unoffsetable"]=true,
+	["J5"]={
 	[0]={
 	{0,0,0,0,0},
-	{0,0,1,0,0},
-	{0,0,1,1,0},
-	{0,0,1,0,0},
-	{1,1,1,1,1},
+	{0,0,0,0,0},
+	{0,0,0,0,1},
+	{0,1,1,1,1},
+	{0,0,0,0,0},
 	},
 	[1]={
-	{1,0,0,0,0},
-	{1,0,0,0,0},
-	{1,1,1,1,0},
-	{1,0,1,0,0},
-	{1,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,1,0},
 	},
 	[2]={
-	{1,1,1,1,1},
-	{0,0,1,0,0},
-	{0,1,1,0,0},
-	{0,0,1,0,0},
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,1,1,1},
+	{0,1,0,0,0},
 	{0,0,0,0,0},
 	},
 	[3]={
-	{0,0,0,0,1},
-	{0,0,1,0,1},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,0,1,0},
+	{0,0,0,1,0},
+	{0,0,0,1,0},
+	},
+	},
+	["L5"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,0,0,0},
+	{0,1,1,1,1},
+	{0,0,0,0,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
 	{0,1,1,1,1},
 	{0,0,0,0,1},
-	{0,0,0,0,1},
+	{0,0,0,0,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,0,0,1,0},
+	{0,0,0,1,0},
+	{0,0,0,1,0},
+	{0,0,1,1,0},
+	},
+	},
+	["Z5a"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,1,0,0},
+	{0,0,1,1,1},
+	{0,0,0,0,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,0,0,1,0},
+	{0,0,1,1,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,1,1,0},
+	{0,0,0,1,1},
+	{0,0,0,0,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,0,0,1,0},
+	{0,0,0,1,0},
+	{0,0,1,1,0},
+	{0,0,1,0,0},
+	},
+	},
+	["S5a"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,0,1,1},
+	{0,1,1,1,0},
+	{0,0,0,0,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,0,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,1,0},
+	{0,0,0,1,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,1},
+	{0,1,1,0,0},
+	{0,0,0,0,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,0,1,0,0},
+	{0,0,1,1,0},
+	{0,0,0,1,0},
+	{0,0,0,1,0},
+	},
+	},
+	["Z5b"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,1,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,0,1,0},
+	{0,1,1,1,0},
+	{0,1,0,0,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,1,0,0},
+	{0,0,1,0,0},
+	{0,0,1,1,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,0,1,0},
+	{0,1,1,1,0},
+	{0,1,0,0,0},
+	},
+	},
+	["S5b"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,0,0},
+	{0,1,1,0,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,0,0,0},
+	{0,1,1,1,0},
+	{0,0,0,1,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,0,0},
+	{0,1,1,0,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,1,0,0,0},
+	{0,1,1,1,0},
+	{0,0,0,1,0},
+	},
+	},
+	-- square
+	["Sq2"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,0,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,0,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,0,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,0,0},
+	},
+	},
+	["Sq3"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,0,0,0,0},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,0,0,0,0},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,0,0,0,0},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,1,1,1,0},
+	{0,0,0,0,0},
+	},
+	},
+	["Sq4"]={
+	[0]={
+	{0,0,0,0,0},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	},
+	[1]={
+	{0,0,0,0,0},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	},
+	[2]={
+	{0,0,0,0,0},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	},
+	[3]={
+	{0,0,0,0,0},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	{0,1,1,1,1},
+	},
+	},
+	["Sq5"]={
+	[0]={
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	},
+	[1]={
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	},
+	[2]={
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	},
+	[3]={
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	{1,1,1,1,1},
+	},
+	},
+	-- super
+	["D13"]={
+	["unoffsetable"]=true,
+	[0]={
+	{0,0,1,0,0},
+	{0,1,1,1,0},
+	{1,1,1,1,1},
+	{0,1,1,1,0},
+	{0,0,1,0,0},
+	},
+	[1]={
+	{0,0,1,0,0},
+	{0,1,1,1,0},
+	{1,1,1,1,1},
+	{0,1,1,1,0},
+	{0,0,1,0,0},
+	},
+	[2]={
+	{0,0,1,0,0},
+	{0,1,1,1,0},
+	{1,1,1,1,1},
+	{0,1,1,1,0},
+	{0,0,1,0,0},
+	},
+	[3]={
+	{0,0,1,0,0},
+	{0,1,1,1,0},
+	{1,1,1,1,1},
+	{0,1,1,1,0},
+	{0,0,1,0,0},
 	},
 	},
 	["T9"]={
@@ -408,61 +755,61 @@ function love.load()
 	[0]={
 	{0,0,0,0,0},
 	{0,0,1,0,0},
-	{0,0,1,1,0},
-	{0,0,1,0,0},
+	{0,1,1,1,0},
 	{1,1,1,1,1},
+	{0,0,0,0,0},
 	},
 	[1]={
-	{1,0,0,0,0},
-	{1,0,0,0,0},
-	{1,1,1,1,0},
-	{1,0,1,0,0},
-	{1,0,0,0,0},
+	{0,1,0,0,0},
+	{0,1,1,0,0},
+	{0,1,1,1,0},
+	{0,1,1,0,0},
+	{0,1,0,0,0},
 	},
 	[2]={
+	{0,0,0,0,0},
 	{1,1,1,1,1},
-	{0,0,1,0,0},
-	{0,1,1,0,0},
+	{0,1,1,1,0},
 	{0,0,1,0,0},
 	{0,0,0,0,0},
 	},
 	[3]={
-	{0,0,0,0,1},
-	{0,0,1,0,1},
-	{0,1,1,1,1},
-	{0,0,0,0,1},
-	{0,0,0,0,1},
+	{0,0,0,1,0},
+	{0,0,1,1,0},
+	{0,1,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,1,0},
 	},
 	},
 	["T15"]={
 	["unoffsetable"]=true,
 	[0]={
-	{0,0,0,0,0},
-	{0,0,1,0,0},
-	{0,0,1,1,0},
-	{0,0,1,0,0},
+	{1,0,0,0,0},
+	{1,1,0,0,0},
+	{1,1,1,0,0},
+	{1,1,1,1,0},
 	{1,1,1,1,1},
 	},
 	[1]={
-	{1,0,0,0,0},
-	{1,0,0,0,0},
+	{1,1,1,1,1},
 	{1,1,1,1,0},
-	{1,0,1,0,0},
+	{1,1,1,0,0},
+	{1,1,0,0,0},
 	{1,0,0,0,0},
 	},
 	[2]={
 	{1,1,1,1,1},
-	{0,0,1,0,0},
-	{0,1,1,0,0},
-	{0,0,1,0,0},
-	{0,0,0,0,0},
+	{0,1,1,1,1},
+	{0,0,1,1,1},
+	{0,0,0,1,1},
+	{0,0,0,0,1},
 	},
 	[3]={
 	{0,0,0,0,1},
-	{0,0,1,0,1},
+	{0,0,0,1,1},
+	{0,0,1,1,1},
 	{0,1,1,1,1},
-	{0,0,0,0,1},
-	{0,0,0,0,1},
+	{1,1,1,1,1},
 	},
 	},
 	["U9"]={
@@ -624,7 +971,7 @@ function initplayer(player)
 	{"E","E","E","E","E","E","E","E","E","E",},
 	{"E","E","E","E","E","E","E","E","E","E",},
 	{"E","E","E","E","E","E","E","E","E","E",},
-	{"I5","E","E","E","E","E","E","E","E","E",},
+	{"E","E","E","E","E","E","E","E","E","E",},
 	}
 	player.pieceactive=false
 	player.piecex=0
@@ -1350,8 +1697,62 @@ function updateplayer(player)
 end
 resettime = 300
 winner = "none"
-randompieces = {"I5"}
+randompieces = {"I5","J5","L5","Z5a","S5a","Z5b","S5b",}
 randomsuperpieces = {"T9","T15","D13"}
+function attackwardsplayer(player,target)
+	if player.linecleartrigger then
+		player.linecleartrigger = false
+		if player.lineclears > 0 then
+			player.combo = player.combo + 1
+			if player.lineclears >= 4 or player.tspin ~= "no" then
+				player.btbs = player.btbs + 1
+			else
+				player.btbs = -1
+			end
+			if player.lineclears >= 2 or player.combo >= 2 then
+				local reattackeris = player.lineclears
+				if player.lineclears < 4 and (not (player.tspin == "full")) then reattackeris = reattackeris - 1 end
+				if player.tspin == "full" then reattackeris = reattackeris * 2 end
+				if player.btbs >= 1 then reattackeris = reattackeris + 1 end
+				if player.combo >= 2 then reattackeris = reattackeris + 1 end
+				if player.combo >= 4 then reattackeris = reattackeris + 1 end
+				if player.combo >= 6 then reattackeris = reattackeris + 1 end
+				if player.combo >= 8 then reattackeris = reattackeris + 1 end
+				if player.combo >= 11 then reattackeris = reattackeris + 1 end
+				if player.perfectclear then reattackeris = reattackeris + 10 end
+				while reattackeris > 0 do
+					if #player.piecequeue >= 2 then
+					nsffbhsdf = #player.piecequeue
+					nsffbhsdfa = false
+						while not (nsffbhsdfa or nsffbhsdf <= 2) do
+							if not (piecetype[player.piecequeue[nsffbhsdf]].unoffsetable) then
+								table.remove(player.piecequeue,nsffbhsdf)
+								nsffbhsdfa = true
+							end
+							nsffbhsdf = nsffbhsdf - 1
+						end
+					end
+					if #target.piecequeue >= 15 and (#player.piecequeue <= 1 or nsffbhsdfa) then
+					nsffbhsdf = 15
+					nsffbhsdfa = false
+						while not (nsffbhsdfa or nsffbhsdf <= 2) do
+							if not (piecetype[target.piecequeue[nsffbhsdf]].unoffsetable) then
+								target.piecequeue[nsffbhsdf] = randomsuperpieces[love.math.random(#randomsuperpieces)]
+								nsffbhsdfa = true
+							end
+							nsffbhsdf = nsffbhsdf - 1
+						end
+					else
+					table.insert(target.piecequeue,randompieces[love.math.random(#randompieces)])
+					end
+					reattackeris = reattackeris - 1
+				end
+			end
+		else
+			player.combo = -1
+		end
+	end
+end
 function love.update(dt)
 frames = frames + (dt*60)
 	while frames > 1 do
@@ -1404,64 +1805,8 @@ frames = frames + (dt*60)
 			sharedpiecequeue = sevenbag()
 		end
 	end
-	if p1.linecleartrigger then
-		p1.linecleartrigger = false
-		if p1.lineclears > 0 then
-			p1.combo = p1.combo + 1
-			if p1.lineclears >= 4 or p1.tspin ~= "no" then
-				p1.btbs = p1.btbs + 1
-			else
-				p1.btbs = -1
-			end
-			if p1.lineclears >= 2 or p1.combo >= 2 then
-				local reattackeris = p1.lineclears
-				if p1.lineclears < 4 and (not (p1.tspin == "full")) then reattackeris = reattackeris - 1 end
-				if p1.tspin == "full" then reattackeris = reattackeris * 2 end
-				if p1.btbs >= 1 then reattackeris = reattackeris + 1 end
-				if p1.combo >= 2 then reattackeris = reattackeris + 1 end
-				if p1.combo >= 4 then reattackeris = reattackeris + 1 end
-				if p1.combo >= 6 then reattackeris = reattackeris + 1 end
-				if p1.combo >= 8 then reattackeris = reattackeris + 1 end
-				if p1.combo >= 11 then reattackeris = reattackeris + 1 end
-				if p1.perfectclear then reattackeris = reattackeris + 10 end
-				while reattackeris > 0 do
-					table.insert(p2.piecequeue,randompieces[love.math.random(#randompieces)])
-					reattackeris = reattackeris - 1
-				end
-			end
-		else
-			p1.combo = -1
-		end
-	end
-	if p2.linecleartrigger then
-		p2.linecleartrigger = false
-		if p2.lineclears > 0 then
-			p2.combo = p2.combo + 1
-			if p2.lineclears >= 4 or p2.tspin ~= "no" then
-				p2.btbs = p2.btbs + 1
-			else
-				p2.btbs = -1
-			end
-			if p2.lineclears >= 2 or p2.combo >= 2 then
-				local reattackeris = p2.lineclears
-				if p2.lineclears < 4 and (not (p1.tspin == "full")) then reattackeris = reattackeris - 1 end
-				if p2.tspin == "full" then reattackeris = reattackeris * 2 end
-				if p2.btbs >= 1 then reattackeris = reattackeris + 1 end
-				if p2.combo >= 2 then reattackeris = reattackeris + 1 end
-				if p2.combo >= 4 then reattackeris = reattackeris + 1 end
-				if p2.combo >= 6 then reattackeris = reattackeris + 1 end
-				if p2.combo >= 8 then reattackeris = reattackeris + 1 end
-				if p2.combo >= 11 then reattackeris = reattackeris + 1 end
-				if p2.perfectclear then reattackeris = reattackeris + 10 end
-				while reattackeris > 0 do
-					table.insert(p1.piecequeue,randompieces[love.math.random(#randompieces)])
-					reattackeris = reattackeris - 1
-				end
-			end
-		else
-			p2.combo = -1
-		end
-	end
+	attackwardsplayer(p1,p2)
+	attackwardsplayer(p2,p1)
 	if #sharedpiecequeue < 3 then
 		for _, h in pairs(sevenbag()) do
 			table.insert(sharedpiecequeue,h)
@@ -1499,16 +1844,31 @@ end
 function nexttero(sprite,piecetyperr,rotation,x,y,size,dimx,dimy,centx,centy)
 	if not piecetyperr then return end
 	if piecetyperr == "E" then return end
-	dimx = dimx or 16
-	dimy = dimy or 16
-	centx = centx or 8
-	centy = centy or 8
-	for pies2 = 1 ,5 do
-		for pies1 = 1 ,5 do
-			if piecetype[piecetyperr][rotation][pies2][pies1] == 1 then
-				drawsprite(sprite, x+((pies1-1)*dimx*size), y+((pies2-1)*dimy*size),centx,centy,size,size)
-			end
-		end
+	if pieceimagetypenexttero[piecetyperr] then
+		dimx = dimx or 64
+		dimy = dimy or 32
+		rookyboy = pieceimagetypenexttero[piecetyperr]:getWidth( )
+		rookyboi = pieceimagetypenexttero[piecetyperr]:getHeight( )
+		centx = centx or rookyboy/2
+		centy = centy or rookyboi/2
+		drawsprite(pieceimagetypenexttero[piecetyperr], x+(2.5*16*size), y+(2.5*16*size),centx,centy,size/(rookyboy/dimx),size/(rookyboi/dimy))
+	else
+		drawpiece(sprite,piecetyperr,rotation,x,y,size,dimx,dimy,centx,centy)
+	end
+end
+function holdtero(sprite,piecetyperr,rotation,x,y,size,dimx,dimy,centx,centy)
+	if not piecetyperr then return end
+	if piecetyperr == "E" then return end
+	if pieceimagetypeholdtero[piecetyperr] then
+		dimx = dimx or 64
+		dimy = dimy or 32
+		rookyboy = pieceimagetypeholdtero[piecetyperr]:getWidth( )
+		rookyboi = pieceimagetypeholdtero[piecetyperr]:getHeight( )
+		centx = centx or rookyboy/2
+		centy = centy or rookyboi/2
+		drawsprite(pieceimagetypeholdtero[piecetyperr], x+(2.5*16*size), y+(2.5*16*size),centx,centy,size/(rookyboy/dimx),size/(rookyboi/dimy))
+	else
+		drawpiece(sprite,piecetyperr,rotation,x,y,size,dimx,dimy,centx,centy)
 	end
 end
 boarddrawable = love.graphics.newCanvas(320,480)
@@ -1537,12 +1897,12 @@ function drawplayer(player,x,y,size)
 	end
 	drawsprite(board, 160, 240,88,240,1,1)
 	drawpiece(pieceimagetype[player.piecequeue[1]],player.piecequeue[1],0,160-(24+16),240-(216+16),1)
-	drawpiece(pieceimagetype[player.piecequeue[2]],player.piecequeue[2],0,160+(36-8),240-(196+8),.5)
-	drawpiece(pieceimagetype[player.piecequeue[3]],player.piecequeue[3],0,160+(68-8),240-(196+8),.5)
+	nexttero(pieceimagetype[player.piecequeue[2]],player.piecequeue[2],0,160+(36-8),240-(196+8),.5)
+	nexttero(pieceimagetype[player.piecequeue[3]],player.piecequeue[3],0,160+(68-8),240-(196+8),.5)
 	for queeeeeeeeeeeen = 4,15 do
-	drawpiece(pieceimagetype[player.piecequeue[queeeeeeeeeeeen]],player.piecequeue[queeeeeeeeeeeen],0,160+(68-8+32),240-(196+8-(16*(queeeeeeeeeeeen-4))),.5)
+	nexttero(pieceimagetype[player.piecequeue[queeeeeeeeeeeen]],player.piecequeue[queeeeeeeeeeeen],0,160+(68-8+32),240-(196+8-(16*(queeeeeeeeeeeen-4))),.5)
 	end
-	drawpiece(player.holdlock and pieceimagetype.G or pieceimagetype[player.holdpiece],player.holdpiece,0,160-(68),240-(196),.5)
+	holdtero(player.holdlock and pieceimagetype.G or pieceimagetype[player.holdpiece],player.holdpiece,0,160-(68),240-(196),.5)
 	if player.pieceactive then
 		if math.fmod(frameticks,2) == 0 then
 			local fafjaeuo = player.piecey
