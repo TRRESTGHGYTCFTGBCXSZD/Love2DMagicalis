@@ -1,0 +1,6 @@
+x=msgbox("upaupaupaupa", 0+0, "upaupaupaupa")
+x=msgbox("upaupaupaupa", 16+1, "upaupaupaupa")
+x=msgbox("upaupaupaupa", 16+2, "upaupaupaupa")
+x=msgbox("upaupaupaupa", 32+3, "upaupaupaupa")
+x=msgbox("upaupaupaupa", 32+4, "upaupaupaupa")
+x=msgbox("upaupaupaupa", 48+5, "upaupaupaupa")

@@ -5,6 +5,7 @@ function love.load()
 	love.graphics.setBackgroundColor(0, 0, 0, 0)
 	bg = love.graphics.newImage("bg.png")
 	board = love.graphics.newImage("board.png")
+	board = love.graphics.newImage("boardglow.png")
 	music = love.audio.newSource("music.ogg", "stream")
 	music:setLooping(true)
 	music:play()
@@ -978,7 +979,7 @@ function initplayer(player)
 	player.piecey=0
 	player.piecerotation=0
 	player.piececurrent="E"
-	player.piecequeue={"I"}
+	player.piecequeue={"T15","T15","T15","T15","T15","T15","T15","T15",}
 	player.attackincoming=0
 	player.linecleartrigger=false
 	player.lineclears=0
@@ -1732,7 +1733,7 @@ function attackwardsplayer(player,target)
 							nsffbhsdf = nsffbhsdf - 1
 						end
 					end
-					if #target.piecequeue >= 15 and (#player.piecequeue <= 1 or nsffbhsdfa) then
+					if #target.piecequeue >= 15 and (#player.piecequeue <= 1 or (not nsffbhsdfa)) then
 					nsffbhsdf = 15
 					nsffbhsdfa = false
 						while not (nsffbhsdfa or nsffbhsdf <= 2) do
@@ -1895,7 +1896,7 @@ function drawplayer(player,x,y,size)
 			end
 		end
 	end
-	drawsprite(board, 160, 240,88,240,1,1)
+	drawsprite(board, 160, 240,88,232,1,1)
 	drawpiece(pieceimagetype[player.piecequeue[1]],player.piecequeue[1],0,160-(24+16),240-(216+16),1)
 	nexttero(pieceimagetype[player.piecequeue[2]],player.piecequeue[2],0,160+(36-8),240-(196+8),.5)
 	nexttero(pieceimagetype[player.piecequeue[3]],player.piecequeue[3],0,160+(68-8),240-(196+8),.5)
